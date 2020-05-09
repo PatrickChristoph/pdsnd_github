@@ -2,9 +2,9 @@ import time
 import pandas as pd
 import calendar
 
-CITY_DATA = { 'chicago': 'chicago.csv',
-              'new york city': 'new_york_city.csv',
-              'washington': 'washington.csv' }
+CITY_DATA = { 'chicago': './data/chicago.csv',
+              'new york city': './data/new_york_city.csv',
+              'washington': './data/washington.csv' }
 
 def get_filters():
     """
@@ -193,8 +193,24 @@ def show_raw_data(df):
         print('This is no valid input. Just say \'yes\' or \'no\' please.\n')
 
 
+def restart_request():
+    try:
+        restart = input('\nWould you like to restart?\n').lower().strip()
+        while True:
+            if (restart == 'yes') or (restart == 'no'):
+                break
+            else:
+                restart = input('Sorry, just say \'yes\' or \'no\' please.\n').lower().strip()
+    except KeyboardInterrupt:
+        print('Sorry, this is no valid input. Just say \'yes\' or \'no\' please.\n')
+
+    return True if restart == 'yes' else False
+
+
 def main():
-    while True:
+    run = True
+
+    while run:
         city, month, day = get_filters()
         df = load_data(city, month, day)
 
@@ -204,19 +220,7 @@ def main():
         user_stats(df)
         show_raw_data(df)
 
-        # Ask the user to restart the applicatin
-        try:
-            restart = input('\nWould you like to restart?\n').lower().strip()
-            while True:
-                if (restart == 'yes') or (restart == 'no'):
-                    break
-                else:
-                    restart = input('Sorry, just say \'yes\' or \'no\' please.\n').lower().strip()
-        except KeyboardInterrupt:
-            print('Sorry, this is no valid input. Just say \'yes\' or \'no\' please.\n')
-
-        if restart == 'no':
-            break
+        run = restart_request()
 
 if __name__ == "__main__":
 	main()
