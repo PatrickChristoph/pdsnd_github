@@ -209,9 +209,9 @@ def restart_request():
         return False
 
 def main():
-    exit = True
+    run = True
 
-    while exit:
+    while run:
         city, month, day = get_filters()
         df = load_data(city, month, day)
 
@@ -221,7 +221,7 @@ def main():
         user_stats(df)
         show_raw_data(df)
 
-        exit = restart_request()
+        run = restart_request()
 
 if __name__ == "__main__":
 	main()
