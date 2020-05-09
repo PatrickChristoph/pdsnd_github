@@ -15,3 +15,4 @@ bikeshare.py - Main Application
 
 ### Credits
 https://github.com/richardkalehoff
+https://www.linkedin.com/in/junoleelj
