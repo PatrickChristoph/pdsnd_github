@@ -14,4 +14,4 @@ bikeshare.py - Main Application
 /data/new_york_city.csv - Raw customer data form Bikeshare NYC
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+https://github.com/richardkalehoff
