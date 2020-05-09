@@ -1,15 +1,14 @@
 ### Date created
-Include the date you created this project and README file.
+2020-05-09
 
 ### Project Title
-Replace the Project Title
+Bikeshare Stats
 
 ### Description
-Describe what your project is about and what it does
+Bikeshare Stats provides useful information about the behaviour of the bikeshare customers.
 
 ### Files used
 Include the files used
 
 ### Credits
 It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
-
