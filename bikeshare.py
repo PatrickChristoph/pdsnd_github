@@ -192,6 +192,7 @@ def show_raw_data(df):
     except KeyboardInterrupt:
         print('This is no valid input. Just say \'yes\' or \'no\' please.\n')
 
+
 def restart_request():
     try:
         restart = input('\nWould you like to restart?\n').lower().strip()
@@ -203,10 +204,8 @@ def restart_request():
     except KeyboardInterrupt:
         print('Sorry, this is no valid input. Just say \'yes\' or \'no\' please.\n')
 
-    if restart == 'yes':
-        return True
-    else:
-        return False
+    return True if restart == 'yes' else False
+
 
 def main():
     run = True
