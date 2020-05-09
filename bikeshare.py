@@ -204,6 +204,7 @@ def main():
         user_stats(df)
         show_raw_data(df)
 
+        # Ask the user to restart the applicatin
         try:
             restart = input('\nWould you like to restart?\n').lower().strip()
             while True:
